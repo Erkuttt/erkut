@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Erkut Altındal | Developer</title>
+    <meta name="description" content="Erkut Altındal – Godot/GDScript, SQL, Java, HTML/CSS. Bolu merkezli geliştirici." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                red: '#B2242A',
+                glow: '#e11d48',
+                dark: '#050505',
+                surface: '#0a0a0a'
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #F8F5EA;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #B2242A; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.2",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+    
+    <!-- Helper script for local development issues -->
+    <script>
+      setTimeout(function() {
+        var root = document.getElementById('root');
+        if (!root || root.childElementCount === 0) {
+          var msg = document.createElement('div');
+          msg.style.position = 'fixed';
+          msg.style.top = '0';
+          msg.style.left = '0';
+          msg.style.width = '100%';
+          msg.style.height = '100%';
+          msg.style.backgroundColor = '#111';
+          msg.style.color = '#fff';
+          msg.style.display = 'flex';
+          msg.style.flexDirection = 'column';
+          msg.style.alignItems = 'center';
+          msg.style.justifyContent = 'center';
+          msg.style.fontFamily = 'sans-serif';
+          msg.style.zIndex = '9999';
+          msg.innerHTML = '<div style="max-width:600px; padding:40px; background:#222; border-radius:12px; text-align:center; border:1px solid #333;">' +
+            '<h2 style="color:#B2242A; margin-bottom:20px; font-size:24px;">Setup Required</h2>' +
+            '<p style="color:#ccc; margin-bottom:20px; line-height:1.6;">This is a React application (.tsx). It cannot be run by simply opening the HTML file in a browser.</p>' +
+            '<div style="background:#000; padding:20px; border-radius:8px; text-align:left; font-family:monospace; color:#4ade80; margin-bottom:20px;">' +
+            '1. Install Node.js<br>2. Open terminal in this folder<br>3. Run: npm install<br>4. Run: npm run dev' +
+            '</div>' +
+            '<p style="font-size:12px; color:#666;">If you see this message online, please refresh the page.</p>' +
+            '</div>';
+          document.body.appendChild(msg);
+        }
+      }, 2000);
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
