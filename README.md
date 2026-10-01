@@ -1,20 +1,24 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Erkut Altındal – Portföy
 
-# Run and deploy your AI Studio app
+React + TypeScript + Vite + Tailwind CSS ile yazılmış kişisel portföy.
 
-This contains everything you need to run your app locally.
+## Çalıştırma
+```
+npm install
+npm run dev
+```
 
-View your app in AI Studio: https://ai.studio/apps/temp/2
+## Yayına alma (statik site)
+`npm run build` komutu `dist/` klasörünü üretir. Bu klasörü Netlify, Vercel, Cloudflare Pages veya GitHub Pages'e yükleyebilirsin (Render ücretsiz planı siteyi uyutur, statik hostlar uyutmaz).
+Render'da kalacaksan "Static Site" olarak oluştur: Build command `npm install && npm run build`, Publish directory `dist`.
 
-## Run Locally
+## Kişiselleştirme
+- `src/config.ts`: e-posta, GitHub, LinkedIn, CV ve proje bağlantıları. Boş bırakılan bağlantılar sitede gizlenir.
+- İletişim formunun gerçekten e-posta göndermesi için formspree.io'da form oluştur ve adresini `VITE_FORM_ENDPOINT` ortam değişkenine yaz (örn. `.env.local`: `VITE_FORM_ENDPOINT=https://formspree.io/f/xxxx`). Tanımlı değilse form, e-posta uygulamasını hazır mesajla açar.
+- CV için PDF'i `public/` klasörüne koyup `config.ts` içindeki `cv` alanını doldur.
+- Paylaşım kartı için `og:image` eklemek istersen 1200x630 bir PNG'yi `public/og.png` olarak koy ve `index.html`'e `<meta property="og:image" content="https://SITEN/og.png" />` ekle.
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Demolar
+- **Atmosphere Weather**: Open-Meteo API'sinden canlı veri çeker.
+- **Öğrenci Sistemi / Kütüphane**: Arayüz prototipleri (gerçek veritabanı yok).
+- **Neon Space Shooter**: Canvas ile yazılmış tarayıcı oyunu.
